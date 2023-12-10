@@ -1,0 +1,25 @@
+System Implementation
+This in-memory file system is implemented in C++ using the following data structures and design decisions:
+
+Data Structures:
+
+Directory: A class representing a directory. It includes a map of child files and directories, a flag indicating whether it's a directory, and a pointer to its parent directory.
+File: A class representing a file. It includes the content of the file.
+Vector: Used for holding lists of strings, such as path components and tokens.
+Map: Used for efficient lookup of child files and directories within a directory.
+String: Used for storing file names, path components, and content.
+Pointer: Used for referencing parent directories and the current working directory.
+Design Decisions:
+
+Directory structure as a tree: The file system is implemented as a tree structure, with directories containing child files and directories. This allows for efficient navigation and organization of files.
+In-memory storage: The file system data is stored in memory, making access and manipulation fast. This approach is suitable for small file systems or temporary use.
+Command-line interface: The file system is controlled through a command-line interface, allowing for easy interaction and testing.
+JSON serialization: The state of the file system is saved and loaded using JSON serialization, making it portable and human-readable.
+Use of libraries: The nlohmann/json library is used for efficient JSON serialization and deserialization.
+Error handling: Basic error checking is implemented for various operations.
+Modular design: The code is divided into separate functions for different functionalities, making it easier to understand and maintain.
+Setup Instructions:
+Install the nlohmann/json library using your package manager or build from source.
+Create a C++ file named file_system.cpp and copy the code provided.
+Compile the code using your C++ compiler.
+Run the compiled executable file_system
